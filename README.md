@@ -21,11 +21,6 @@ Make sure Scrapy is installed:
 pip install scrapy
 ```
 
-Set the keywords you want to search in Google Scholar.
-
-```
-queries = ['airbnb', 'covid-19']
-```
 
 Signup to [Scraper API](https://www.scraperapi.com/signup) and get your free API key that allows you to scrape 1,000 pages per month for free. Enter your API key into the API variable:
 
@@ -51,6 +46,8 @@ RETRY_TIMES = 5
 ```
 
 We should also set `RETRY_TIMES` to tell Scrapy to retry any failed requests (to 5 for example) and make sure that `DOWNLOAD_DELAY`  and `RANDOMIZE_DOWNLOAD_DELAY` aren’t enabled as these will lower your concurrency and are not needed with Scraper API.
+
+在paper-list.txt 中添加要查询的论文标题，一行一个
 
 To run the spider, use:
 
